@@ -128,3 +128,4 @@ if __name__ == '__main__':
     from pywebio import start_server
     start_server(main)
 
+print("не хуй, а привет")
