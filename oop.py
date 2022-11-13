@@ -117,11 +117,17 @@ def main():
         except: put_text("auto wasn't found", scope='scope2')
 
 
+    def db_path():
+        clear("scope2")
+        global FILENAME
+        FILENAME = input('Enter path to database', value=FILENAME, validate=Regular.anti_obscene)
+
+
     '''Buttons'''
     set_scope('scope1', 'ROOT')
     set_scope('scope2', 'ROOT')
-    put_buttons(["Add auto", "Show info", "Show all", "Edit auto", "Delete auto"],
-                onclick=[add, show, show_all, edit, delete], scope='scope1')
+    put_buttons(["Add auto", "Show info", "Show all", "Edit auto", "Delete auto", "DB path"],
+                onclick=[add, show, show_all, edit, delete, db_path], scope='scope1')
 
 
 if __name__ == '__main__':
