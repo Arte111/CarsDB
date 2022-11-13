@@ -120,12 +120,10 @@ def main():
     '''Buttons'''
     set_scope('scope1', 'ROOT')
     set_scope('scope2', 'ROOT')
-    put_buttons(["Add auto", "Show info", "Show all", "Edit auto", "Delete auto", "DB path"],
+    put_buttons(["Add auto", "Show info", "Show all", "Edit auto", "Delete auto"],
                 onclick=[add, show, show_all, edit, delete], scope='scope1')
 
 
 if __name__ == '__main__':
     from pywebio import start_server
     start_server(main)
-
-print("не хуй, а привет")
